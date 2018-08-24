@@ -23,7 +23,7 @@ export class BackendService {
 
     find(id) {
         let constructor = Models.get(this.model.key);
-        return this.api.get(new constructor().getUri() + '/' + id).pipe(map(client => {
+        return this.api.get(new constructor().getUri() + '/' + id).pipe(map((client: any) => {
             client.data = ModelFactory.make(Models.get(this.model.key), client.data);
             return client;
         }));
@@ -69,13 +69,13 @@ export class BackendService {
             observable = this.api.get(model.getUri(), requestOptions);
         }
 
-        observable = observable.map(response => {
-            let data = response.data;
-            response.data = ModelFactory.makeFromArray(Models.get(this.model.key), data);
-            return response;
-        });
-
-        return observable;
+        return observable.pipe(
+                map((response: any) => {
+                    let data = response.data;
+                    response.data = ModelFactory.makeFromArray(Models.get(this.model.key), data);
+                    return response;
+                })
+        );
     }
 
     getRelated(related, key, model = null, options = {}) {

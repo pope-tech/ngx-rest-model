@@ -5,7 +5,7 @@ export declare class BackendService {
     protected model: any;
     constructor(api: ApiService);
     setModel(model: any): void;
-    find(id: any): Observable<any>;
+    find(id: any): any;
     save(data: any): any;
     update(data: any): Observable<Object>;
     createNew(data: any): any;

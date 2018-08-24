@@ -44,7 +44,7 @@ export class ApiService {
         return this.getApiRoot() + '/' + uri;
     }
 
-    public get(uri, options = {}, bypassPrefix = false): Observable<any> {
+    public get(uri, options = {}, bypassPrefix = false): any {
         let url = this.getUrl(uri, bypassPrefix);
         if(options != {}) {
             return this.http.get(url, options).pipe(take(1));
