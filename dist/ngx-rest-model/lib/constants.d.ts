@@ -1,2 +1,2 @@
 import { InjectionToken } from "@angular/core";
-export declare const CONFIG: InjectionToken<{}>;
+export declare const CONFIG: InjectionToken<unknown>;

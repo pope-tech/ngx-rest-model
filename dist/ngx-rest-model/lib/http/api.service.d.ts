@@ -9,7 +9,7 @@ export declare class ApiService {
     getBaseUrl(): string;
     setApiRoot(url: string): void;
     getApiRoot(): string;
-    private getUrl(uri, bypassPrefix?);
+    private getUrl;
     get(uri: any, options?: {}, bypassPrefix?: boolean): any;
     post(uri: any, payload: any, bypassPrefix?: boolean, options?: {}): any;
     put(uri: any, payload: any, bypassPrefix?: boolean): Observable<Object>;
