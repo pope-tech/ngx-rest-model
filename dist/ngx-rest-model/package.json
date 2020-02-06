@@ -2,8 +2,9 @@
   "name": "@popetech/ngx-rest-model",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0",
+    "tslib": "^1.10.0"
   },
   "main": "bundles/popetech-ngx-rest-model.umd.js",
   "module": "fesm5/popetech-ngx-rest-model.js",
@@ -13,9 +14,8 @@
   "fesm5": "fesm5/popetech-ngx-rest-model.js",
   "fesm2015": "fesm2015/popetech-ngx-rest-model.js",
   "typings": "popetech-ngx-rest-model.d.ts",
-  "metadata": "popetech-ngx-rest-model.metadata.json",
   "sideEffects": false,
-  "dependencies": {
-    "tslib": "^1.9.0"
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
   }
 }

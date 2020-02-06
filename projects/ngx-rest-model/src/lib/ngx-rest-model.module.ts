@@ -14,7 +14,7 @@ import {CONFIG} from "./constants";
     ]
 })
 export class NgxRestModelModule {
-    public static forRoot(config): ModuleWithProviders {
+    public static forRoot(config): ModuleWithProviders<NgxRestModelModule> {
         return {
             ngModule: NgxRestModelModule,
             providers: [{ provide: CONFIG, useValue: config}]

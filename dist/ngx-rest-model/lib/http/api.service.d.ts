@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 export declare class ApiService {
     private baseUrl;
     private apiRoot;
@@ -14,4 +15,6 @@ export declare class ApiService {
     post(uri: any, payload: any, bypassPrefix?: boolean, options?: {}): any;
     put(uri: any, payload: any, bypassPrefix?: boolean): Observable<Object>;
     delete(uri: any, options?: {}, bypassPrefix?: boolean): Observable<Object>;
+    static ɵfac: i0.ɵɵFactoryDef<ApiService>;
+    static ɵprov: i0.ɵɵInjectableDef<ApiService>;
 }
