@@ -14,8 +14,6 @@
   "fesm5": "fesm5/popetech-ngx-rest-model.js",
   "fesm2015": "fesm2015/popetech-ngx-rest-model.js",
   "typings": "popetech-ngx-rest-model.d.ts",
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  "metadata": "popetech-ngx-rest-model.metadata.json",
+  "sideEffects": false
 }

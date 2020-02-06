@@ -1,6 +1,5 @@
 import { ApiService } from './api.service';
 import { Observable } from "rxjs";
-import * as i0 from "@angular/core";
 export declare class BackendService {
     protected api: ApiService;
     protected model: any;
@@ -13,6 +12,4 @@ export declare class BackendService {
     destroy(data: any): Observable<Object>;
     get(model?: any, options?: any): any;
     getRelated(related: any, key: any, model?: any, options?: {}): any;
-    static ɵfac: i0.ɵɵFactoryDef<BackendService>;
-    static ɵprov: i0.ɵɵInjectableDef<BackendService>;
 }

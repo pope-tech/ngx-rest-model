@@ -1,10 +1,11 @@
-import { InjectionToken, ɵɵinject, ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, Inject, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule } from '@angular/core';
+import { __decorate, __param, __metadata } from 'tslib';
+import { InjectionToken, Inject, Injectable, NgModule } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { take, map } from 'rxjs/operators';
 
 const CONFIG = new InjectionToken('config');
 
-class ApiService {
+let ApiService = class ApiService {
     constructor(http, config) {
         this.http = http;
         const root = config.api_root;
@@ -51,15 +52,16 @@ class ApiService {
         let url = this.getUrl(uri, bypassPrefix);
         return this.http.delete(url).pipe(take(1));
     }
-}
-ApiService.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(ɵɵinject(HttpClient), ɵɵinject(CONFIG)); };
-ApiService.ɵprov = ɵɵdefineInjectable({ token: ApiService, factory: ApiService.ɵfac });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ApiService, [{
-        type: Injectable
-    }], function () { return [{ type: HttpClient }, { type: undefined, decorators: [{
-                type: Inject,
-                args: [CONFIG]
-            }] }]; }, null); })();
+};
+ApiService.ctorParameters = () => [
+    { type: HttpClient },
+    { type: undefined, decorators: [{ type: Inject, args: [CONFIG,] }] }
+];
+ApiService = __decorate([
+    Injectable(),
+    __param(1, Inject(CONFIG)),
+    __metadata("design:paramtypes", [HttpClient, Object])
+], ApiService);
 
 class Models {
     static add(model) {
@@ -208,7 +210,7 @@ class ModelFactory {
     }
 }
 
-class BackendService {
+let BackendService = class BackendService {
     constructor(api) {
         this.api = api;
     }
@@ -268,38 +270,35 @@ class BackendService {
         model = ModelFactory.makeRelated(new constructor(), related, key);
         return this.get(model);
     }
-}
-BackendService.ɵfac = function BackendService_Factory(t) { return new (t || BackendService)(ɵɵinject(ApiService)); };
-BackendService.ɵprov = ɵɵdefineInjectable({ token: BackendService, factory: BackendService.ɵfac });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BackendService, [{
-        type: Injectable
-    }], function () { return [{ type: ApiService }]; }, null); })();
+};
+BackendService.ctorParameters = () => [
+    { type: ApiService }
+];
+BackendService = __decorate([
+    Injectable(),
+    __metadata("design:paramtypes", [ApiService])
+], BackendService);
 
-class NgxRestModelModule {
+var NgxRestModelModule_1;
+let NgxRestModelModule = NgxRestModelModule_1 = class NgxRestModelModule {
     static forRoot(config) {
         return {
-            ngModule: NgxRestModelModule,
+            ngModule: NgxRestModelModule_1,
             providers: [{ provide: CONFIG, useValue: config }]
         };
     }
-}
-NgxRestModelModule.ɵmod = ɵɵdefineNgModule({ type: NgxRestModelModule });
-NgxRestModelModule.ɵinj = ɵɵdefineInjector({ factory: function NgxRestModelModule_Factory(t) { return new (t || NgxRestModelModule)(); }, providers: [
-        ApiService,
-        BackendService
-    ], imports: [[]] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NgxRestModelModule, [{
-        type: NgModule,
-        args: [{
-                imports: [],
-                declarations: [],
-                exports: [],
-                providers: [
-                    ApiService,
-                    BackendService
-                ]
-            }]
-    }], null, null); })();
+};
+NgxRestModelModule = NgxRestModelModule_1 = __decorate([
+    NgModule({
+        imports: [],
+        declarations: [],
+        exports: [],
+        providers: [
+            ApiService,
+            BackendService
+        ]
+    })
+], NgxRestModelModule);
 
 /*
  * Public API Surface of ngx-rest-model
@@ -309,5 +308,5 @@ NgxRestModelModule.ɵinj = ɵɵdefineInjector({ factory: function NgxRestModelMo
  * Generated bundle index. Do not edit.
  */
 
-export { ApiService, BackendService, BaseModel, ModelFactory, Models, NgxRestModelModule, Relationship };
+export { ApiService, BackendService, BaseModel, ModelFactory, Models, NgxRestModelModule, Relationship, CONFIG as ɵa };
 //# sourceMappingURL=popetech-ngx-rest-model.js.map

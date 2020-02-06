@@ -258,16 +258,17 @@
             var url = this.getUrl(uri, bypassPrefix);
             return this.http.delete(url).pipe(operators.take(1));
         };
-        ApiService.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(core["ɵɵinject"](http.HttpClient), core["ɵɵinject"](CONFIG)); };
-        ApiService.ɵprov = core["ɵɵdefineInjectable"]({ token: ApiService, factory: ApiService.ɵfac });
+        ApiService.ctorParameters = function () { return [
+            { type: http.HttpClient },
+            { type: undefined, decorators: [{ type: core.Inject, args: [CONFIG,] }] }
+        ]; };
+        ApiService = __decorate([
+            core.Injectable(),
+            __param(1, core.Inject(CONFIG)),
+            __metadata("design:paramtypes", [http.HttpClient, Object])
+        ], ApiService);
         return ApiService;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](ApiService, [{
-            type: core.Injectable
-        }], function () { return [{ type: http.HttpClient }, { type: undefined, decorators: [{
-                    type: core.Inject,
-                    args: [CONFIG]
-                }] }]; }, null); })();
 
     var Models = /** @class */ (function () {
         function Models() {
@@ -501,42 +502,40 @@
             model = ModelFactory.makeRelated(new constructor(), related, key);
             return this.get(model);
         };
-        BackendService.ɵfac = function BackendService_Factory(t) { return new (t || BackendService)(core["ɵɵinject"](ApiService)); };
-        BackendService.ɵprov = core["ɵɵdefineInjectable"]({ token: BackendService, factory: BackendService.ɵfac });
+        BackendService.ctorParameters = function () { return [
+            { type: ApiService }
+        ]; };
+        BackendService = __decorate([
+            core.Injectable(),
+            __metadata("design:paramtypes", [ApiService])
+        ], BackendService);
         return BackendService;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](BackendService, [{
-            type: core.Injectable
-        }], function () { return [{ type: ApiService }]; }, null); })();
 
     var NgxRestModelModule = /** @class */ (function () {
         function NgxRestModelModule() {
         }
+        NgxRestModelModule_1 = NgxRestModelModule;
         NgxRestModelModule.forRoot = function (config) {
             return {
-                ngModule: NgxRestModelModule,
+                ngModule: NgxRestModelModule_1,
                 providers: [{ provide: CONFIG, useValue: config }]
             };
         };
-        NgxRestModelModule.ɵmod = core["ɵɵdefineNgModule"]({ type: NgxRestModelModule });
-        NgxRestModelModule.ɵinj = core["ɵɵdefineInjector"]({ factory: function NgxRestModelModule_Factory(t) { return new (t || NgxRestModelModule)(); }, providers: [
-                ApiService,
-                BackendService
-            ], imports: [[]] });
+        var NgxRestModelModule_1;
+        NgxRestModelModule = NgxRestModelModule_1 = __decorate([
+            core.NgModule({
+                imports: [],
+                declarations: [],
+                exports: [],
+                providers: [
+                    ApiService,
+                    BackendService
+                ]
+            })
+        ], NgxRestModelModule);
         return NgxRestModelModule;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](NgxRestModelModule, [{
-            type: core.NgModule,
-            args: [{
-                    imports: [],
-                    declarations: [],
-                    exports: [],
-                    providers: [
-                        ApiService,
-                        BackendService
-                    ]
-                }]
-        }], null, null); })();
 
     exports.ApiService = ApiService;
     exports.BackendService = BackendService;
@@ -545,6 +544,7 @@
     exports.Models = Models;
     exports.NgxRestModelModule = NgxRestModelModule;
     exports.Relationship = Relationship;
+    exports.ɵa = CONFIG;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
