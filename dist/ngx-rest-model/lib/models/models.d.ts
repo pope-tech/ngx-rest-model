@@ -3,3 +3,4 @@ export declare class Models {
     static add(model: any): void;
     static get(model: any): any;
 }
+//# sourceMappingURL=models.d.ts.map

@@ -23,3 +23,4 @@ export declare class BaseModel implements Model, Serializable {
     deserialize(input: any): this;
     snakeToCamel(string: any): any;
 }
+//# sourceMappingURL=base-model.d.ts.map

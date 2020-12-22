@@ -1,11 +1,10 @@
-import { __decorate, __param, __metadata } from 'tslib';
-import { InjectionToken, Inject, Injectable, NgModule } from '@angular/core';
+import { InjectionToken, Injectable, Inject, NgModule } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { take, map } from 'rxjs/operators';
 
 const CONFIG = new InjectionToken('config');
 
-let ApiService = class ApiService {
+class ApiService {
     constructor(http, config) {
         this.http = http;
         const root = config.api_root;
@@ -52,16 +51,14 @@ let ApiService = class ApiService {
         let url = this.getUrl(uri, bypassPrefix);
         return this.http.delete(url).pipe(take(1));
     }
-};
+}
+ApiService.decorators = [
+    { type: Injectable }
+];
 ApiService.ctorParameters = () => [
     { type: HttpClient },
     { type: undefined, decorators: [{ type: Inject, args: [CONFIG,] }] }
 ];
-ApiService = __decorate([
-    Injectable(),
-    __param(1, Inject(CONFIG)),
-    __metadata("design:paramtypes", [HttpClient, Object])
-], ApiService);
 
 class Models {
     static add(model) {
@@ -210,7 +207,7 @@ class ModelFactory {
     }
 }
 
-let BackendService = class BackendService {
+class BackendService {
     constructor(api) {
         this.api = api;
     }
@@ -270,35 +267,35 @@ let BackendService = class BackendService {
         model = ModelFactory.makeRelated(new constructor(), related, key);
         return this.get(model);
     }
-};
+}
+BackendService.decorators = [
+    { type: Injectable }
+];
 BackendService.ctorParameters = () => [
     { type: ApiService }
 ];
-BackendService = __decorate([
-    Injectable(),
-    __metadata("design:paramtypes", [ApiService])
-], BackendService);
 
-var NgxRestModelModule_1;
-let NgxRestModelModule = NgxRestModelModule_1 = class NgxRestModelModule {
+class NgxRestModelModule {
     static forRoot(config) {
         return {
-            ngModule: NgxRestModelModule_1,
+            ngModule: NgxRestModelModule,
             providers: [{ provide: CONFIG, useValue: config }]
         };
     }
-};
-NgxRestModelModule = NgxRestModelModule_1 = __decorate([
-    NgModule({
-        imports: [],
-        declarations: [],
-        exports: [],
-        providers: [
-            ApiService,
-            BackendService
-        ]
-    })
-], NgxRestModelModule);
+}
+NgxRestModelModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [],
+                declarations: [],
+                exports: [],
+                providers: [
+                    ApiService,
+                    BackendService
+                ]
+            },] }
+];
+
+;
 
 /*
  * Public API Surface of ngx-rest-model

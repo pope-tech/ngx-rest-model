@@ -10,3 +10,4 @@ export declare class Relationship {
     getModel(): void;
     getUri(): void;
 }
+//# sourceMappingURL=relationship.d.ts.map

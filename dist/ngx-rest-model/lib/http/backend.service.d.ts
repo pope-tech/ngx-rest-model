@@ -13,3 +13,4 @@ export declare class BackendService {
     get(model?: any, options?: any): any;
     getRelated(related: any, key: any, model?: any, options?: {}): any;
 }
+//# sourceMappingURL=backend.service.d.ts.map

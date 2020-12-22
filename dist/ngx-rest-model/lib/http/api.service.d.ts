@@ -15,3 +15,4 @@ export declare class ApiService {
     put(uri: any, payload: any, bypassPrefix?: boolean): Observable<Object>;
     delete(uri: any, options?: {}, bypassPrefix?: boolean): Observable<Object>;
 }
+//# sourceMappingURL=api.service.d.ts.map

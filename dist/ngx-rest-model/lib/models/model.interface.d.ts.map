@@ -1,0 +1,1 @@
+{"version":3,"file":"model.interface.d.ts","sourceRoot":"../../../projects/ngx-rest-model/src/","sources":["lib/models/model.interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,WAAW;IACxB,GAAG,MAAC;IACJ,GAAG,MAAC;IACJ,MAAM,CAAC,MAAC;IACR,aAAa,CAAC,MAAC;CAClB;AAED,MAAM,WAAW,KAAK;IAClB,WAAW,EAAE,WAAW,CAAC;CAC5B"}

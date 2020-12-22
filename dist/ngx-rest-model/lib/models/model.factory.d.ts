@@ -4,3 +4,4 @@ export declare class ModelFactory {
     static makeRelated(model: any, related: any, key: any): any;
     static makeRelatedFromRelationship(relationship: any, input: any): any;
 }
+//# sourceMappingURL=model.factory.d.ts.map

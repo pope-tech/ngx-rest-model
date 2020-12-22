@@ -1,0 +1,1 @@
+{"version":3,"file":"relationship.d.ts","sourceRoot":"../../../projects/ngx-rest-model/src/","sources":["lib/models/relationship.ts"],"names":[],"mappings":"AAEA,qBAAa,YAAY;IAET,SAAS,CAAC,KAAK;IAAE,SAAS,CAAC,OAAO;IAAE,SAAS,CAAC,IAAI;gBAAxC,KAAK,KAAA,EAAY,OAAO,KAAA,EAAY,IAAI,KAAA;IAE9D,UAAU,CAAC,OAAO,KAAA;IAIlB,UAAU;IAIV,QAAQ,CAAC,KAAK,KAAA;IAId,MAAM;IAiBN,QAAQ;IAIR,MAAM;CAGT"}

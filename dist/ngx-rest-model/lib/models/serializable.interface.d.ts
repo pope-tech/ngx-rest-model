@@ -5,3 +5,4 @@
 export interface Serializable {
     deserialize(input: Object): any;
 }
+//# sourceMappingURL=serializable.interface.d.ts.map

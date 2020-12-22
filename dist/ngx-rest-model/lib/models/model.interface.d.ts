@@ -7,3 +7,4 @@ export interface ModelConfig {
 export interface Model {
     modelConfig: ModelConfig;
 }
+//# sourceMappingURL=model.interface.d.ts.map

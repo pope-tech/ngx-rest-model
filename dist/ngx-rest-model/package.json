@@ -1,17 +1,17 @@
 {
   "name": "@popetech/ngx-rest-model",
   "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "tslib": "^1.10.0"
+    "@angular/common": "^11.0.0",
+    "@angular/core": "^11.0.0"
   },
   "main": "bundles/popetech-ngx-rest-model.umd.js",
-  "module": "fesm5/popetech-ngx-rest-model.js",
+  "module": "fesm2015/popetech-ngx-rest-model.js",
   "es2015": "fesm2015/popetech-ngx-rest-model.js",
-  "esm5": "esm5/popetech-ngx-rest-model.js",
   "esm2015": "esm2015/popetech-ngx-rest-model.js",
-  "fesm5": "fesm5/popetech-ngx-rest-model.js",
   "fesm2015": "fesm2015/popetech-ngx-rest-model.js",
   "typings": "popetech-ngx-rest-model.d.ts",
   "metadata": "popetech-ngx-rest-model.metadata.json",
