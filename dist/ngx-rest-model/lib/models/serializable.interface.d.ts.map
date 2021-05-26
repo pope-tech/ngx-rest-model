@@ -1,1 +1,1 @@
-{"version":3,"file":"serializable.interface.d.ts","sourceRoot":"../../../projects/ngx-rest-model/src/","sources":["lib/models/serializable.interface.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,WAAW,YAAY;IACzB,WAAW,CAAC,KAAK,EAAE,MAAM,OAAE;CAC9B"}
+{"version":3,"file":"serializable.interface.d.ts","sourceRoot":"","sources":["../../../../projects/ngx-rest-model/src/lib/models/serializable.interface.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,WAAW,YAAY;IACzB,WAAW,CAAC,KAAK,EAAE,MAAM,OAAE;CAC9B"}

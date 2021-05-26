@@ -1,1 +1,1 @@
-{"version":3,"file":"models.d.ts","sourceRoot":"../../../projects/ngx-rest-model/src/","sources":["lib/models/models.ts"],"names":[],"mappings":"AAAA,qBAAa,MAAM;IAEf,MAAM,CAAC,MAAM,KAAM;IAEnB,MAAM,CAAC,GAAG,CAAC,KAAK,KAAA;IAOhB,MAAM,CAAC,GAAG,CAAC,KAAK,KAAA;CAGnB"}
+{"version":3,"file":"models.d.ts","sourceRoot":"","sources":["../../../../projects/ngx-rest-model/src/lib/models/models.ts"],"names":[],"mappings":"AAAA,qBAAa,MAAM;IAEf,MAAM,CAAC,MAAM,KAAM;IAEnB,MAAM,CAAC,GAAG,CAAC,KAAK,KAAA;IAOhB,MAAM,CAAC,GAAG,CAAC,KAAK,KAAA;CAGnB"}

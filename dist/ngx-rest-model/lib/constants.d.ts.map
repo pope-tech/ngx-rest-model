@@ -1,1 +1,1 @@
-{"version":3,"file":"constants.d.ts","sourceRoot":"../../../projects/ngx-rest-model/src/","sources":["lib/constants.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,cAAc,EAAC,MAAM,eAAe,CAAC;AAE7C,eAAO,MAAM,MAAM,yBAA+B,CAAC"}
+{"version":3,"file":"constants.d.ts","sourceRoot":"","sources":["../../../projects/ngx-rest-model/src/lib/constants.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,cAAc,EAAC,MAAM,eAAe,CAAC;AAE7C,eAAO,MAAM,MAAM,yBAA+B,CAAC"}

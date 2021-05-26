@@ -54,6 +54,7 @@ export class ApiService {
     }
 
     public post(uri, payload, bypassPrefix = false, options = {}): any {
+
         let url = this.getUrl(uri, bypassPrefix);
 
         if(options != {}) {
