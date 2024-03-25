@@ -51,9 +51,9 @@ export class ApiService {
         return this.http.delete(url).pipe(take(1));
     }
 }
-ApiService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: ApiService, deps: [{ token: i1.HttpClient }, { token: CONFIG }], target: i0.ɵɵFactoryTarget.Injectable });
-ApiService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: ApiService });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: ApiService, decorators: [{
+ApiService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: ApiService, deps: [{ token: i1.HttpClient }, { token: CONFIG }], target: i0.ɵɵFactoryTarget.Injectable });
+ApiService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: ApiService });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: ApiService, decorators: [{
             type: Injectable
         }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: undefined, decorators: [{
                     type: Inject,

@@ -8,20 +8,18 @@
     "@angular/common": "^12.0.0",
     "@angular/core": "^12.0.0"
   },
-  "module_ivy_ngcc": "__ivy_ngcc__/fesm2015/popetech-ngx-rest-model.mjs",
   "module": "fesm2015/popetech-ngx-rest-model.mjs",
   "es2020": "fesm2020/popetech-ngx-rest-model.mjs",
   "esm2020": "esm2020/popetech-ngx-rest-model.mjs",
   "fesm2020": "fesm2020/popetech-ngx-rest-model.mjs",
-  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/popetech-ngx-rest-model.mjs",
   "fesm2015": "fesm2015/popetech-ngx-rest-model.mjs",
-  "typings": "popetech-ngx-rest-model.d.ts",
+  "typings": "index.d.ts",
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./popetech-ngx-rest-model.d.ts",
+      "types": "./index.d.ts",
       "esm2020": "./esm2020/popetech-ngx-rest-model.mjs",
       "es2020": "./fesm2020/popetech-ngx-rest-model.mjs",
       "es2015": "./fesm2015/popetech-ngx-rest-model.mjs",
@@ -29,13 +27,5 @@
       "default": "./fesm2020/popetech-ngx-rest-model.mjs"
     }
   },
-  "sideEffects": false,
-  "__processed_by_ivy_ngcc__": {
-    "fesm2015": "13.4.0",
-    "module": "13.4.0",
-    "typings": "13.4.0"
-  },
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
-  }
+  "sideEffects": false
 }

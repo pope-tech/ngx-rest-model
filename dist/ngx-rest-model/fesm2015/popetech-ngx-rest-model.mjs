@@ -54,9 +54,9 @@ class ApiService {
         return this.http.delete(url).pipe(take(1));
     }
 }
-ApiService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: ApiService, deps: [{ token: i1.HttpClient }, { token: CONFIG }], target: i0.ɵɵFactoryTarget.Injectable });
-ApiService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: ApiService });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: ApiService, decorators: [{
+ApiService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: ApiService, deps: [{ token: i1.HttpClient }, { token: CONFIG }], target: i0.ɵɵFactoryTarget.Injectable });
+ApiService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: ApiService });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: ApiService, decorators: [{
             type: Injectable
         }], ctorParameters: function () {
         return [{ type: i1.HttpClient }, { type: undefined, decorators: [{
@@ -273,9 +273,9 @@ class BackendService {
         return this.get(model);
     }
 }
-BackendService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: BackendService, deps: [{ token: ApiService }], target: i0.ɵɵFactoryTarget.Injectable });
-BackendService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: BackendService });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: BackendService, decorators: [{
+BackendService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: BackendService, deps: [{ token: ApiService }], target: i0.ɵɵFactoryTarget.Injectable });
+BackendService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: BackendService });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: BackendService, decorators: [{
             type: Injectable
         }], ctorParameters: function () { return [{ type: ApiService }]; } });
 
@@ -287,13 +287,13 @@ class NgxRestModelModule {
         };
     }
 }
-NgxRestModelModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: NgxRestModelModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-NgxRestModelModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: NgxRestModelModule });
-NgxRestModelModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: NgxRestModelModule, providers: [
+NgxRestModelModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: NgxRestModelModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+NgxRestModelModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.3.0", ngImport: i0, type: NgxRestModelModule });
+NgxRestModelModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: NgxRestModelModule, providers: [
         ApiService,
         BackendService
-    ], imports: [[]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.4.0", ngImport: i0, type: NgxRestModelModule, decorators: [{
+    ] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: NgxRestModelModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [],
