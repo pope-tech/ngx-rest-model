@@ -13,7 +13,7 @@
     "module": "es2020",
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "target": "es2020",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -30,6 +30,7 @@
         "dist/ngx-rest-model/*",
         "dist/ngx-rest-model/*"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }

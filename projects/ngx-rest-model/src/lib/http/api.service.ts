@@ -46,7 +46,7 @@ export class ApiService {
 
     public get(uri, options = {}, bypassPrefix = false): any {
         let url = this.getUrl(uri, bypassPrefix);
-        if(options != {}) {
+        if(Object.keys(options).length !== 0) {
             return this.http.get(url, options).pipe(take(1));
         }
 
@@ -57,7 +57,7 @@ export class ApiService {
 
         let url = this.getUrl(uri, bypassPrefix);
 
-        if(options != {}) {
+        if(Object.keys(options).length !== 0) {
             return this.http.post(url, payload, options).pipe(take(1));
         }
 
