@@ -1,6 +1,6 @@
 import { ApiService } from './api.service';
 import { Observable } from "rxjs";
-import * as ɵngcc0 from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class BackendService {
     protected api: ApiService;
     protected model: any;
@@ -13,8 +13,7 @@ export declare class BackendService {
     destroy(data: any): Observable<Object>;
     get(model?: any, options?: any): any;
     getRelated(related: any, key: any, model?: any, options?: {}): any;
-    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<BackendService, never>;
-    static ɵprov: ɵngcc0.ɵɵInjectableDeclaration<BackendService>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BackendService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<BackendService>;
 }
-
 //# sourceMappingURL=backend.service.d.ts.map

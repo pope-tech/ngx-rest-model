@@ -1,1 +1,1 @@
-{"version":3,"file":"popetech-ngx-rest-model.d.ts","sources":["popetech-ngx-rest-model.d.ts"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","sourcesContent":["/**\n * Generated bundle index. Do not edit.\n */\nexport * from './public_api';\nexport { CONFIG as ɵa } from './lib/constants';\n"]}
+{"version":3,"file":"popetech-ngx-rest-model.d.ts","sourceRoot":"","sources":["../../projects/ngx-rest-model/src/popetech-ngx-rest-model.ts"],"names":[],"mappings":"AAAA;;GAEG;;AAEH,cAAc,cAAc,CAAC"}

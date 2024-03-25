@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import * as ɵngcc0 from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class ApiService {
     private baseUrl;
     private apiRoot;
@@ -15,8 +15,7 @@ export declare class ApiService {
     post(uri: any, payload: any, bypassPrefix?: boolean, options?: {}): any;
     put(uri: any, payload: any, bypassPrefix?: boolean): Observable<Object>;
     delete(uri: any, options?: {}, bypassPrefix?: boolean): Observable<Object>;
-    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<ApiService, never>;
-    static ɵprov: ɵngcc0.ɵɵInjectableDeclaration<ApiService>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ApiService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<ApiService>;
 }
-
 //# sourceMappingURL=api.service.d.ts.map
