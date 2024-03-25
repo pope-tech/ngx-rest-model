@@ -56,12 +56,12 @@ class ApiService {
     static { this.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(i0.ɵɵinject(i1.HttpClient), i0.ɵɵinject(CONFIG)); }; }
     static { this.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: ApiService, factory: ApiService.ɵfac }); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ApiService, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ApiService, [{
         type: Injectable
-    }], function () { return [{ type: i1.HttpClient }, { type: undefined, decorators: [{
+    }], () => [{ type: i1.HttpClient }, { type: undefined, decorators: [{
                 type: Inject,
                 args: [CONFIG]
-            }] }]; }, null); })();
+            }] }], null); })();
 
 class Models {
     static { this.models = {}; }
@@ -273,9 +273,9 @@ class BackendService {
     static { this.ɵfac = function BackendService_Factory(t) { return new (t || BackendService)(i0.ɵɵinject(ApiService)); }; }
     static { this.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: BackendService, factory: BackendService.ɵfac }); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BackendService, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BackendService, [{
         type: Injectable
-    }], function () { return [{ type: ApiService }]; }, null); })();
+    }], () => [{ type: ApiService }], null); })();
 
 class NgxRestModelModule {
     static forRoot(config) {
@@ -291,7 +291,7 @@ class NgxRestModelModule {
             BackendService
         ] }); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxRestModelModule, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxRestModelModule, [{
         type: NgModule,
         args: [{
                 imports: [],
