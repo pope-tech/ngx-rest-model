@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpParams} from "@angular/common/http";
+import { HttpParams } from "@angular/common/http";
 
 import { ApiService } from './api.service';
 import { ModelFactory } from '../models/model.factory';
