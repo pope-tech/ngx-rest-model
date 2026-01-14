@@ -44,13 +44,13 @@ export class ApiService {
         return this.getApiRoot() + '/' + uri;
     }
 
-    public get(uri, options = {}, bypassPrefix = false): any {
+    public get<T>(uri, options = {}, bypassPrefix = false): Observable<T> {
         let url = this.getUrl(uri, bypassPrefix);
         if(Object.keys(options).length !== 0) {
-            return this.http.get(url, options).pipe(take(1));
+            return this.http.get<T>(url, options).pipe(take(1));
         }
 
-        return this.http.get(url).pipe(take(1));
+        return this.http.get<T>(url).pipe(take(1));
     }
 
     public post(uri, payload, bypassPrefix = false, options = {}): any {

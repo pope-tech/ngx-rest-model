@@ -11,7 +11,7 @@ export declare class ApiService {
     setApiRoot(url: string): void;
     getApiRoot(): string;
     private getUrl;
-    get(uri: any, options?: {}, bypassPrefix?: boolean): any;
+    get<T>(uri: any, options?: {}, bypassPrefix?: boolean): Observable<T>;
     post(uri: any, payload: any, bypassPrefix?: boolean, options?: {}): any;
     put(uri: any, payload: any, bypassPrefix?: boolean): Observable<Object>;
     delete(uri: any, options?: {}, bypassPrefix?: boolean): Observable<Object>;
